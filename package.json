@@ -1,0 +1,23 @@
+{
+  "name": "dobutsu_shogi",
+  "version": "0.0.0",
+  "description": "The beloved Japanese board game Dobutsu Shogi.",
+  "keywords": [
+    "Dobutsu Shogi",
+    "board games",
+    "Japanese chess",
+    "artificial intelligence"
+  ],
+  "license": "UNLICENSED",
+  "contributors": [
+    "Roland Maio <rolandmaio38@gmail.com>"
+  ],
+  "repository": "https://rolandma@bitbucket.org/rolandma/dobutsu_shogi.git",
+  "engines": {
+    "node": ">=0.12.x"
+  },
+  "private": true,
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}

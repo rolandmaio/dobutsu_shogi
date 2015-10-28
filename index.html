@@ -1,0 +1,66 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!--<link href="style.css" rel="stylesheet" type="text/css">-->
+    <style>
+</style>
+  </head><body>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="btn-toolbar" role="toolbar">
+              <div class="btn-group">
+                <a type="button" class="btn btn-default">New Game</a>
+                <a type="button" class="btn btn-default">Play Against Human</a>
+                <a type="button" class="btn btn-default">Play Against Computer</a>
+                <a type="button" class="btn btn-default">Switch Sides</a>
+              </div>
+              <div class="btn-group"></div>
+              <div class="btn-group"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container" style="background-image: url(images/landscape.png); background-repeat: no-repeat">
+        <div class="row game-row">
+          <div id="00" class="col-md-2 tile"></div>
+          <div id="01" class="col-md-2 tile"></div>
+          <div id="02" class="col-md-2 tile"></div>
+          <div id="skyBench" class="col-md-6"></div>
+        </div>
+        <div class="row game-row">
+          <div id="10" class="col-md-2 tile"></div>
+          <div id="11" class="col-md-2 tile"></div>
+          <div id="12" class="col-md-2 tile"></div>
+        </div>
+        <div class="row game-row">
+          <div id="20" class="col-md-2 tile"></div>
+          <div id="21" class="col-md-2 tile"></div>
+          <div id="22" class="col-md-2 tile"></div>
+        </div>
+        <div class="row game-row">
+          <div id="30" class="col-md-2 tile"></div>
+          <div id="31" class="col-md-2 tile"></div>
+          <div id="32" class="col-md-2 tile"></div>
+          <div id="earthBench" class="col-md-6"></div>
+        </div>
+      </div>
+    </div>
+    <!-- This was just to see test the mouseover and mouseleave events!
+    <script type="text/javascript">
+      document.getElementById("00").addEventListener("mouseover", function(event){
+        event.target.style = "background-color:orange;";
+      });
+      document.getElementById("00").addEventListener("mouseleave", function(event){
+        event.target.style = "background-color:transparent;";
+      });
+    </script>
+    -->
+
+</body></html>
