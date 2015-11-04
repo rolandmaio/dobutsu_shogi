@@ -1,0 +1,15 @@
+{
+  "appenders": [
+  {
+    "type": "console"
+  },
+  {
+    "type": "file",
+    "filename": "./logs/dobutsu_shogi.log"
+  }
+  ],
+
+  "levels": {
+    "[all]": "ALL"
+  }
+}

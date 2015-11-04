@@ -18,6 +18,12 @@
   },
   "private": true,
   "dependencies": {
-    "express": "^4.13.3"
+    "bootstrap": "^3.3.5",
+    "express": "^4.13.3",
+    "font-awesome": "^4.4.0",
+    "jade": "^1.11.0",
+    "jquery": "^2.1.4",
+    "log4js": "^0.6.27",
+    "morgan": "^1.6.1"
   }
 }

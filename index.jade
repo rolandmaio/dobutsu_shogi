@@ -1,0 +1,56 @@
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    script(type='text/javascript', charset='utf-8')
+      include node_modules/jquery/dist/jquery.min.js
+    script(type='text/javascript', src='http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js')
+      include node_modules/bootstrap/dist/js/bootstrap.min.js
+    style
+      include node_modules/font-awesome/css/font-awesome.min.css
+    style
+      include assets/css/style.css
+    style.
+  body
+    .section
+      .container
+        .row
+          .col-md-12
+            .btn-toolbar(role='toolbar')
+              .btn-group
+                a#newGameButton.btn.btn-default(type='button') New Game
+                a#playAgainstHumanButton.btn.btn-default(type='button') Play Against Human
+                a#playAgainstComputerButton.btn.btn-default(type='button') Play Against Computer
+                a#switchSidesButton.btn.btn-default(type='button') Switch Sides
+              .btn-group
+              .btn-group
+    .section
+      .container(style='background-image: url(images/landscape.png); background-repeat: no-repeat')
+        .row.game-row
+          #00.col-md-2.tile
+          #01.col-md-2.tile
+          #02.col-md-2.tile
+          #skyBench.col-md-6
+        .row.game-row
+          #10.col-md-2.tile
+          #11.col-md-2.tile
+          #12.col-md-2.tile
+        .row.game-row
+          #20.col-md-2.tile
+          #21.col-md-2.tile
+          #22.col-md-2.tile
+        .row.game-row
+          #30.col-md-2.tile
+          #31.col-md-2.tile
+          #32.col-md-2.tile
+          #earthBench.col-md-6
+    //
+      This was just to see test the mouseover and mouseleave events!
+      <script type="text/javascript">
+      document.getElementById("00").addEventListener("mouseover", function(event){
+      event.target.style = "background-color:orange;";
+      });
+      document.getElementById("00").addEventListener("mouseleave", function(event){
+      event.target.style = "background-color:transparent;";
+      });
+      </script>
