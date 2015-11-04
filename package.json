@@ -13,6 +13,9 @@
     "Roland Maio <rolandmaio38@gmail.com>"
   ],
   "repository": "https://rolandma@bitbucket.org/rolandma/dobutsu_shogi.git",
+  "scripts": {
+    "build": "gluejs --include modules --main modules/index.js --out dobutsu_shogi.js"
+  },
   "engines": {
     "node": ">=0.12.x"
   },

@@ -4,7 +4,7 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1')
     script(type='text/javascript', charset='utf-8')
       include node_modules/jquery/dist/jquery.min.js
-    script(type='text/javascript', src='http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js')
+    script(type='text/javascript')
       include node_modules/bootstrap/dist/js/bootstrap.min.js
     style
       include node_modules/font-awesome/css/font-awesome.min.css
@@ -28,29 +28,33 @@ html
       .container(style='background-image: url(images/landscape.png); background-repeat: no-repeat')
         .row.game-row
           #00.col-md-2.tile
+            span.helper
           #01.col-md-2.tile
+            span.helper
           #02.col-md-2.tile
+            span.helper
           #skyBench.col-md-6
         .row.game-row
           #10.col-md-2.tile
+            span.helper
           #11.col-md-2.tile
+            span.helper
           #12.col-md-2.tile
+            span.helper
         .row.game-row
           #20.col-md-2.tile
+            span.helper
           #21.col-md-2.tile
+            span.helper
           #22.col-md-2.tile
+            span.helper
         .row.game-row
           #30.col-md-2.tile
+            span.helper
           #31.col-md-2.tile
+            span.helper
           #32.col-md-2.tile
+            span.helper
           #earthBench.col-md-6
-    //
-      This was just to see test the mouseover and mouseleave events!
-      <script type="text/javascript">
-      document.getElementById("00").addEventListener("mouseover", function(event){
-      event.target.style = "background-color:orange;";
-      });
-      document.getElementById("00").addEventListener("mouseleave", function(event){
-      event.target.style = "background-color:transparent;";
-      });
-      </script>
+    script(type='text/javascript')
+      include dobutsu_shogi.js

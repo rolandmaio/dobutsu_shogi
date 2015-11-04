@@ -147,3 +147,405 @@
 [2015-10-29 10:14:04.954] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
 [2015-10-29 10:29:01.210] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
 [2015-10-29 10:29:01.213] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 09:55:52.059] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 09:55:52.065] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 09:56:04.221] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 09:56:04.222] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 09:56:06.287] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 09:56:44.463] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 09:56:44.468] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 09:56:49.540] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 09:56:49.545] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 09:57:02.688] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 09:57:02.694] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 09:57:07.794] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 09:57:07.799] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 09:57:10.710] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 09:57:10.710] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 09:57:11.134] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 09:57:20.946] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 09:57:20.951] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 09:57:22.942] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 09:57:22.948] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 09:57:22.991] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 09:57:22.991] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 09:57:23.411] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 09:57:33.018] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 09:57:33.023] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 09:57:35.065] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 09:57:35.070] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 09:57:35.510] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 09:57:35.510] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 09:57:35.941] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 09:59:58.153] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 09:59:58.158] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:00:00.199] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:00:00.204] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:00:02.934] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 10:00:02.934] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 10:00:03.459] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 10:00:48.589] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:00:48.595] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:00:51.597] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:00:51.602] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:00:57.426] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 10:00:57.426] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 10:00:57.929] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 10:01:47.066] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:01:47.071] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:01:55.198] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:01:55.203] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:01:59.134] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 10:01:59.135] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 10:01:59.689] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 10:03:52.128] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:03:52.133] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:04:52.724] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:04:52.729] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:05:52.203] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:05:52.208] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:06:12.406] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:06:12.411] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:06:13.369] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:06:13.374] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:06:15.219] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 10:06:15.220] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 10:06:16.063] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 10:06:30.488] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:06:30.493] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:10:25.354] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:10:25.359] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:11:09.691] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:11:09.696] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:11:53.008] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:11:53.014] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:12:44.521] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:12:44.526] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:13:40.971] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:13:40.976] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:14:57.614] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:14:57.619] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:15:20.825] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:15:20.831] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:15:32.986] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:15:32.991] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:16:22.378] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:16:22.383] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:16:49.656] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:16:49.661] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:17:22.963] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:17:22.968] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:17:46.166] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:17:46.172] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:17:56.280] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:17:56.285] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:18:53.827] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:18:53.832] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:19:18.052] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:19:18.057] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:19:21.090] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:19:21.096] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:19:43.307] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:19:43.312] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:20:44.831] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:20:44.836] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:21:13.052] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:21:13.058] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:21:28.177] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:21:28.183] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:21:47.380] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:21:47.386] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:21:59.469] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:21:59.474] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:22:10.590] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:22:10.595] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:22:33.796] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:22:33.802] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:23:25.286] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:23:25.291] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:23:53.482] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:23:53.487] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:24:51.890] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:24:51.895] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:25:07.069] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:25:07.074] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:25:20.179] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:25:20.185] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:25:25.229] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:25:25.234] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:25:35.325] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:25:35.330] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:26:05.604] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:26:05.610] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:27:22.057] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:27:22.062] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:27:23.105] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:27:23.110] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:27:44.261] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:27:44.266] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 10:27:45.278] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 10:27:45.283] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:24:36.580] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:24:36.585] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:24:40.518] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 11:24:40.518] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 11:24:41.286] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 11:25:02.745] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:25:02.750] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:25:04.798] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:25:04.805] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:25:07.301] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 11:25:07.301] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 11:25:07.811] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 11:25:57.129] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:25:57.134] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:26:00.221] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:26:00.227] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:26:02.538] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 11:26:02.538] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 11:26:03.033] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 11:26:22.340] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:26:22.346] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:26:24.371] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:26:24.376] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:26:27.310] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 11:26:27.311] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 11:26:27.805] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 11:27:43.926] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:27:43.931] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:28:02.038] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:28:02.044] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:28:25.230] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:28:25.235] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:28:54.443] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:28:54.448] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:29:08.554] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:29:08.559] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:29:24.676] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:29:24.681] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:29:27.726] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:29:27.732] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:29:28.856] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 11:29:28.856] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 11:29:29.438] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 11:30:11.005] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:30:11.010] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:31:17.432] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:31:17.438] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:31:21.538] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:31:21.543] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:31:22.559] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:31:22.565] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:31:23.888] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 11:31:23.888] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 11:31:24.467] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 11:32:25.981] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:32:25.986] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:33:16.324] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:33:16.329] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:34:10.683] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:34:10.688] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:34:43.927] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:34:43.932] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:35:23.200] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:35:23.206] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:35:37.290] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:35:37.298] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:38:02.207] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:38:02.212] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:44:19.233] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:44:19.241] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:44:29.343] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:44:29.349] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:44:32.357] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:44:32.362] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:44:35.408] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:44:35.413] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:44:37.426] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 11:44:37.426] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 11:44:38.090] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 11:44:57.578] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:44:57.584] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:44:59.597] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:44:59.603] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:45:00.526] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 11:45:00.527] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 11:45:01.098] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 11:45:27.732] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:45:27.737] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:45:33.852] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:45:33.858] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:45:34.884] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 11:45:34.885] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 11:45:35.677] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 11:46:19.017] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:46:19.022] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:46:21.051] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:46:21.056] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:46:22.555] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 11:46:22.555] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 11:46:23.143] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 11:46:24.370] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/chick.png
+[2015-11-04 11:48:00.567] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:48:00.573] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:48:29.735] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:48:29.740] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:48:34.811] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:48:34.817] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:48:36.174] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 11:48:36.175] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 11:48:36.778] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 11:48:38.638] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/chick.png
+[2015-11-04 11:49:16.010] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:49:16.017] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:49:18.037] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:49:18.043] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:49:42.189] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:49:42.194] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:49:58.272] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:49:58.277] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:50:23.433] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:50:23.438] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:50:38.538] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:50:38.544] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:51:06.688] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:51:06.694] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:51:22.779] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:51:22.784] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:52:06.030] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:52:06.035] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:52:10.078] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:52:10.083] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:52:15.095] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:52:15.101] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:55:25.974] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:55:25.980] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:55:44.061] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:55:44.067] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:56:11.210] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:56:11.216] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:56:30.312] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:56:30.318] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:57:00.468] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:57:00.473] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:57:19.578] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:57:19.583] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:57:25.636] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:57:25.642] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 11:57:52.766] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 11:57:52.771] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 12:00:00.425] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 12:00:00.430] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 12:00:12.495] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 12:00:12.502] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 12:00:13.717] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 12:00:13.717] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 12:00:14.273] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 12:00:29.597] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 12:00:29.604] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 12:00:33.611] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 12:00:33.616] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 12:00:34.249] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 12:00:34.250] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 12:00:34.828] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 12:00:36.111] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthLion.png
+[2015-11-04 12:01:41.962] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 12:01:41.969] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 12:01:45.003] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 12:01:45.010] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 12:01:46.222] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 12:01:46.223] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 12:01:46.818] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 12:01:47.644] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyGiraffe.png
+[2015-11-04 12:01:47.646] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyLion.png
+[2015-11-04 12:01:47.652] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyElephant.png
+[2015-11-04 12:01:47.653] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthElephant.png
+[2015-11-04 12:01:47.659] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthGiraffe.png
+[2015-11-04 12:01:47.682] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthLion.png
+[2015-11-04 12:04:03.775] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 12:04:03.780] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 12:06:12.515] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 12:06:12.520] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 12:06:16.572] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 12:06:16.578] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 12:06:19.556] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 12:06:19.556] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 12:06:20.118] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 12:06:22.119] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyGiraffe.png
+[2015-11-04 12:06:22.122] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyLion.png
+[2015-11-04 12:06:22.123] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyElephant.png
+[2015-11-04 12:06:22.125] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthElephant.png
+[2015-11-04 12:06:22.126] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthLion.png
+[2015-11-04 12:06:22.127] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthGiraffe.png
+[2015-11-04 12:07:43.068] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 12:07:43.074] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 12:07:50.131] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 12:07:50.137] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 12:07:52.159] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 12:07:52.160] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 12:07:52.737] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 12:07:54.869] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyGiraffe.png
+[2015-11-04 12:07:54.873] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyLion.png
+[2015-11-04 12:07:54.874] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyElephant.png
+[2015-11-04 12:07:54.875] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyChick.png
+[2015-11-04 12:07:54.880] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthChick.png
+[2015-11-04 12:07:54.883] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthElephant.png
+[2015-11-04 12:07:54.884] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthLion.png
+[2015-11-04 12:07:54.888] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthGiraffe.png
+[2015-11-04 12:24:26.154] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Spinning up the server!
+[2015-11-04 12:24:26.160] [INFO] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Docking on port: 3000!
+[2015-11-04 12:24:33.198] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 12:24:33.199] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 12:24:33.819] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 12:24:35.912] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyGiraffe.png
+[2015-11-04 12:24:35.915] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyLion.png
+[2015-11-04 12:24:35.917] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyElephant.png
+[2015-11-04 12:24:35.921] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthLion.png
+[2015-11-04 12:24:35.921] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyChick.png
+[2015-11-04 12:24:35.922] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthChick.png
+[2015-11-04 12:24:35.922] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthElephant.png
+[2015-11-04 12:24:35.923] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthGiraffe.png
+[2015-11-04 12:25:05.668] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 12:25:05.668] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 12:25:06.008] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 12:25:09.437] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyGiraffe.png
+[2015-11-04 12:25:09.446] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyLion.png
+[2015-11-04 12:25:09.446] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyElephant.png
+[2015-11-04 12:25:09.447] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyChick.png
+[2015-11-04 12:25:09.450] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthChick.png
+[2015-11-04 12:25:09.460] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthElephant.png
+[2015-11-04 12:25:09.461] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthLion.png
+[2015-11-04 12:25:09.463] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthGiraffe.png
+[2015-11-04 12:25:27.075] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 12:25:27.075] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 12:25:27.431] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 12:25:29.388] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyGiraffe.png
+[2015-11-04 12:25:29.395] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyLion.png
+[2015-11-04 12:25:29.397] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyElephant.png
+[2015-11-04 12:25:29.400] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyChick.png
+[2015-11-04 12:25:29.402] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthChick.png
+[2015-11-04 12:25:29.407] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthElephant.png
+[2015-11-04 12:25:29.409] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthLion.png
+[2015-11-04 12:25:29.418] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthGiraffe.png
+[2015-11-04 12:26:45.892] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 12:26:45.892] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 12:26:46.316] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 12:26:48.472] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyGiraffe.png
+[2015-11-04 12:26:48.473] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyLion.png
+[2015-11-04 12:26:48.473] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyElephant.png
+[2015-11-04 12:26:48.475] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyChick.png
+[2015-11-04 12:26:48.476] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthChick.png
+[2015-11-04 12:26:48.477] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthElephant.png
+[2015-11-04 12:26:48.478] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthLion.png
+[2015-11-04 12:26:48.482] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthGiraffe.png
+[2015-11-04 12:32:17.864] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET / route
+[2015-11-04 12:32:17.864] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Rendering index.jade
+[2015-11-04 12:32:18.245] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/landscape.png
+[2015-11-04 12:32:19.405] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyGiraffe.png
+[2015-11-04 12:32:19.407] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyLion.png
+[2015-11-04 12:32:19.408] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyElephant.png
+[2015-11-04 12:32:19.410] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/skyChick.png
+[2015-11-04 12:32:19.411] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthChick.png
+[2015-11-04 12:32:19.411] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthElephant.png
+[2015-11-04 12:32:19.425] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthLion.png
+[2015-11-04 12:32:19.427] [DEBUG] /home/roland/Fall2015/AI/programs/dobutsu_shogi/server.js - Entering GET /images/earthGiraffe.png

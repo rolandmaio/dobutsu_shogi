@@ -16,6 +16,7 @@
   height: 200px;
   width: 200px;
   border: 1px solid black;
+  text-align: center;
 }
 .game-row {
   height: 200px;
@@ -27,6 +28,19 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.centered {
+  vertical-align: middle;
+  margin: auto;
+  display: block;
+}
+
 body {
   margin: 0;
 }
