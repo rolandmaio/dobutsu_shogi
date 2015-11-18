@@ -9,12 +9,22 @@ var LionPiece = require('./LionPiece'),
 module.exports = function(position, game){
 
   var self = this;
+  self.position = position;
   self.game = game;
+  self.bench = [];
   self.pieces = {
     'Lion': new LionPiece(position, self),
     'Giraffe': new GiraffePiece(position, self),
     'Elephant': new ElephantPiece(position, self),
     'Chick': new ChickPiece(position, self)
+  };
+  self.takenTypeToPiece = {
+    'EarthChick': ChickPiece,
+    'SkyChick': ChickPiece,
+    'EarthGiraffe': GiraffePiece,
+    'SkyGiraffe': GiraffePiece,
+    'EarthElephant': ElephantPiece,
+    'SkyElephant': ElephantPiece
   };
 
   self.earthInitialization = function(){
@@ -30,7 +40,6 @@ module.exports = function(position, game){
     self.pieces.Chick.setPosition(2, 1);
     console.log('Exiting HumanPlayer.earthInitialization');
   };
-
   self.skyInitialization = function(){
     console.log('Entering HumanPlayer.skyInitialization');
     self.game.board[0][0] = self.pieces.Giraffe;
@@ -51,18 +60,18 @@ module.exports = function(position, game){
     console.log('Entering HumanPlayer.move');
     console.log('Exiting HumanPlayer.move');
   }
-
-  self.validateUIMove = function(move){
-    console.log('Entering HumanPlayer.validateUIMove');
-    // If the move is valid.
-    // Execute the move.
-    // Call the next player to move.
-    console.log('Exiting HumanPlayer.validateUIMove');
+  self.makeMove = function(piece, move){
+    console.log('Entering HumanPlayer.makeMove');
+    console.log('piece: ' + piece);
+    self.game.executeMove(piece, move);
+    console.log('Exiting HumanPlayer.makeMove');
   }
-
   self.computeMoves = function(piece){
     console.log('Entering HumanPlayer.computeMoves');
     var moves = [];
+    if(piece.x == -1 && piece.y == -1){
+      return game.openTiles();
+    }
     piece.generateMoves().forEach(function(move){
       if((0 <= move.x && move.x <= 3 && 0 <= move.y && move.y <= 2) &&
          (game.board[move.x][move.y] == null ||
@@ -77,5 +86,20 @@ module.exports = function(position, game){
     console.log('Exiting HumanPlayer.computeMoves');
     return moves;
   };
+  self.removePiece = function(piece){
+    console.log('Entering HumanPlayer.removePiece');
+    console.log('Exiting HumanPlayer.removePiece');
+  };
+  self.addToBench = function(piece){
+    console.log('Entering HumanPlayer.addToBench');
+    var constructor = self.takenTypeToPiece[piece.type],
+        newPiece = new constructor(self.position, self);
+    newPiece.setPosition(-1, -1);
+    self.bench.push(newPiece);
+    console.log('Exiting HumanPlayer.addToBench');
+  };
+  self.getBench = function(){
+    return self.bench;
+  }
 
 }

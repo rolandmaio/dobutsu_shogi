@@ -44,6 +44,14 @@ html {
   outline: red solid 5px;
 }
 
+.highlighted-possible {
+  outline: yellow solid 5px;
+}
+
+.highlighted-bench {
+  outline: green solid 5px;
+}
+
 body {
   margin: 0;
 }
