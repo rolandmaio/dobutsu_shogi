@@ -11,38 +11,38 @@ module.exports = function(mode, computerPosition){
     [null, null, null],
     [null, null, null]
   ];
+  self.observers = [];
+  self.mode = mode;
+  self.computerPosition = computerPosition;
   self.earthPlayer = new HumanPlayer('earth', self);
   self.skyPlayer = new HumanPlayer('sky', self);
-  self.currPlayer = null;
+  self.currPlayer = 'earth';
+  self.registerObserver = function(observer){
+    self.observers.push(observer);
+  };
+  self.notifyObservers = function(evt){
+    self.observers.forEach(function(observer){
+      observer.notify(evt);
+    })
+  };
   self.startGame = function(){
     console.log('Entering Game.startGame');
-    self.currPlayer = self.earthPlayer;
-    earthPlayer.move();
+    self.currPlayer = 'sky';
+    self.nextMove();
     console.log('Exiting Game.startGame');
   };
-  /*
-  self.startGame = function(){
-    console.log('Entering Game.startGame');
-    var currPlayer = 'earthPlayer',
-        nextMove = null;
-    while(true){
-      if(currPlayer == 'earthPlayer'){
-        nextMove = earthPlayer.move(board);
-        nextMove.gameOver ? break : self.executeMove(nextMove);
-        currPlayer = 'skyPlayer';
-      } else {
-        nextMove = skyPlayer.move(board);
-        nextMove.gameOver ? break : self.executeMove(nextMove);
-        currPlayer = 'earthPlayer';
-      }
+  self.nextMove = function(){
+    self.notifyObservers(self.currPlayer == 'earth' ? 'skyPlayerMove' : 'earthPlayerMove');
+    if(self.currPlayer == 'earth'){
+      self.skyPlayer.move();
+    } else {
+      self.earthPlayer.move();
     }
-    console.log('Exiting Game.startGame');
-  }
-  */
-
+    self.currPlayer = self.currPlayer == 'earth' ? 'sky' : 'earth';
+  };
   self.executeMove = function(move){
     console.log('Entering Game.executeMove');
     console.log('Exiting Game.executeMove');
-  }
+  };
 
 }

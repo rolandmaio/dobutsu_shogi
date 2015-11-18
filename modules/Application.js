@@ -4,8 +4,9 @@ module.exports = function(Game, ViewModel, UIElements){
 
   var self = this;
   self.computerPosition = 'sky';
-  self.mode = 'versus computer';
+  self.mode = 'versus human';
   self.viewModel = new ViewModel();
+  self.game;
 
   self.switchPlayerSides = function(){
     console.log('Entering Application.switchPlayerSides');
@@ -28,7 +29,9 @@ module.exports = function(Game, ViewModel, UIElements){
 
   self.startNewGame = function(){
     console.log('Entering Application.startNewGame');
-    self.viewModel.newGame(new Game(self.mode, self.computerPosition));
+    self.game = new Game(self.mode, self.computerPosition);
+    self.viewModel.newGame(self.game);
+    self.game.startGame();
     console.log('Exiting Application.startNewGame');
   }
 
