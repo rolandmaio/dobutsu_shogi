@@ -1,6 +1,7 @@
 'use strict';
 
-var HumanPlayer = require('./HumanPlayer');
+var HumanPlayer = require('./HumanPlayer'),
+    HenPiece = require('./HenPiece');
 
 module.exports = function(mode, computerPosition){
 
@@ -11,6 +12,7 @@ module.exports = function(mode, computerPosition){
     [null, null, null],
     [null, null, null]
   ];
+  self.history = [];
   self.observers = [];
   self.mode = mode;
   self.computerPosition = computerPosition;
@@ -55,6 +57,7 @@ module.exports = function(mode, computerPosition){
         self.skyPlayer.addToBench(self.board[move.x][move.y]);
       }
     }
+    // Check if this piece is coming off the bench.
     if(piece.x == -1 && piece.y == -1){
       for(var i = 0; i < piece.owner.bench.length; i++){
         if(piece.owner.bench[i].type == piece.type){
@@ -62,11 +65,42 @@ module.exports = function(mode, computerPosition){
           break;
         }
       }
+      piece.owner.pieces.push(piece);
     } else {
       self.board[piece.x][piece.y] = null;
+      // Check if this piece is a Chick that has made it to the end zone.
+      piece.owner.removePiece(piece);
+      if(piece.type == 'EarthChick' && move.x == 0){
+        piece = new HenPiece(piece.side, piece.owner);
+      } if(piece.type == 'SkyChick' && move.x == 3){
+        piece = new HenPiece(piece.side, piece.owner);
+      }
+      piece.owner.pieces.push(piece);
     }
     self.board[move.x][move.y] = piece;
     piece.setPosition(move.x, move.y);
+    var threatens = piece.owner.computeMoves(piece);
+    // Set the inCheck flag.
+    if(self.currPlayer == 'earth'){
+      self.skyPlayer.attackingPosition = move;
+      var lionPosition = self.skyPlayer.lionPosition;
+      self.skyPlayer.inCheck = false;
+      for(var i = 0; i < threatens.length; ++i){
+        if(threatens[i].x == lionPosition.x && threatens[i].y == lionPosition.y){
+          self.skyPlayer.inCheck = true;
+        }
+      }
+    } else {
+      self.earthPlayer.attackingPosition = move;
+      var lionPosition = self.earthPlayer.lionPosition;
+      self.earthPlayer.inCheck = false;
+      for(var i = 0; i < threatens.length; ++i){
+        if(threatens[i].x == lionPosition.x && threatens[i].y == lionPosition.y){
+          self.earthPlayer.inCheck = true;
+        }
+      }
+    }
+    self.history.push({'piece.type': piece.type, 'move': move});
     self.nextMove();
     console.log('Exiting Game.executeMove');
   };
@@ -77,6 +111,35 @@ module.exports = function(mode, computerPosition){
         if(self.board[i][j] == null)
           tiles.push({'x': i, 'y': j});
     return tiles;
+  };
+  self.getMovablePieces = function(){
+    if(self.currPlayer == 'sky'){
+      return self.earthPlayer.pieces;
+    } else {
+      return self.skyPlayer.pieces;
+    }
+  };
+  self.getThreatenedTiles = function(){
+    console.log('Entering Game.getThreatenedTiles');
+    var player = self.currPlayer == 'earth' ? self.skyPlayer : self.earthPlayer,
+        tiles = [];
+    console.log('player.pieces.length: ' + player.pieces.length);
+    player.pieces.forEach(function(piece){
+      console.log('piece.type: ' + piece.type);
+      console.log('piece.generateMoves(): ' + JSON.stringify(piece.generateMoves()));
+      tiles = tiles.concat(piece.generateMoves());
+    });
+    console.log('Threatened tiles: ' + JSON.stringify(tiles));
+    console.log('Exiting Game.getThreatenedTiles');
+    return tiles;
+  };
+  self.notifyDefeat = function(player){
+    var msg = 'Game over! The ' + (player.position == 'earth' ? 'Sky' : 'Earth') + ' player wins!';
+    alert(msg);
+    for(var i = 0; i < self.history.length; i++){
+      console.log('Move ' + i + ': ' + JSON.stringify(self.history[i]));
+    }
+    self.notifyObservers('gameOver');
   }
 
 }

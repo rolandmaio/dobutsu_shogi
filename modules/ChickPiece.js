@@ -5,7 +5,6 @@ module.exports = function(side, owner){
   console.log('Entering ChickPiece constructor');
   var self = this;
   self.owner = owner;
-  console.log('ChickPiece.owner: ' + self.owner);
   self.side = side;
   self.type = side == 'earth' ? 'EarthChick' : 'SkyChick';
   self.setPosition = function(x, y){

@@ -29,6 +29,13 @@ module.exports = function(){
         return;
       }
       console.log('Exiting ViewModel.eventCallbacks.earthPlayerMove');
+    },
+    'gameOver': function(){
+      for(var i = 0; i < 4; i++)
+        for(var j = 0; j < 3; j++){
+          var selector = self.makeSelector(i, j);
+          $(selector).off('click');
+        }
     }
   };
   self.newGame = function(game){
@@ -58,6 +65,11 @@ module.exports = function(){
     }
   };
   self.displayBoard = function(){
+    /*
+    self.game.getMovablePieces().forEach(function(piece){
+      self.displayPiece(piece.x, piece.y, piece);
+    });
+    */
     for(var i = 0; i < 4; i++)
       for(var j = 0; j < 3; j++)
         if(self.game.board[i][j])
@@ -121,6 +133,7 @@ module.exports = function(){
   self.clearHighlightedPossibleMoves = function(){
     self.highlightedPossibleMovePieces.forEach(function(selector){
       $(selector).toggleClass('highlighted-possible');
+      $(selector).off('click');
     });
     self.highlightedPossibleMovePieces = [];
   };

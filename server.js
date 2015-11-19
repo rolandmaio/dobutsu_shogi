@@ -38,7 +38,7 @@ app.get('/images/earthChick.png', function(req, res){
 app.get('/images/earthHen.png', function(req, res){
   logger.debug('Entering GET /images/earthHen.png');
   res.writeHead(200, {'Content-Type': 'image/png'})
-  fs.createReadStream('assets/images/EarthChick125.png').pipe(res);
+  fs.createReadStream('assets/images/EarthHen125.png').pipe(res);
 })
 app.get('/images/earthElephant.png', function(req, res){
   logger.debug('Entering GET /images/earthElephant.png');
@@ -63,7 +63,7 @@ app.get('/images/skyChick.png', function(req, res){
 app.get('/images/skyHen.png', function(req, res){
   logger.debug('Entering GET /images/skyHen.png');
   res.writeHead(200, {'Content-Type': 'image/png'})
-  fs.createReadStream('assets/images/EarthChick125.png').pipe(res);
+  fs.createReadStream('assets/images/SkyHen125.png').pipe(res);
 })
 app.get('/images/skyElephant.png', function(req, res){
   logger.debug('Entering GET /images/skyElephant.png');
