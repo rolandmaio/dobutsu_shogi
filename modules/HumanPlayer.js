@@ -71,11 +71,11 @@ module.exports = function(position, game){
   self.move = function(){
     console.log('Entering HumanPlayer.move');
     if(self.inCheck){
-      moves = [];
+      var moves = [];
       self.pieces.forEach(function(piece){
         moves = moves.concat(self.computeMoves(piece));
       });
-      if(lionMoves.length == 0){
+      if(moves.length == 0){
         self.game.notifyDefeat(self);
       }
     }
