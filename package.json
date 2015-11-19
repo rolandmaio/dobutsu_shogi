@@ -14,6 +14,7 @@
   ],
   "repository": "https://rolandma@bitbucket.org/rolandma/dobutsu_shogi.git",
   "scripts": {
+    "start": "npm run build && node server.js",
     "build": "gluejs --include modules --main modules/index.js --out dobutsu_shogi.js"
   },
   "engines": {
@@ -21,6 +22,7 @@
   },
   "private": true,
   "dependencies": {
+    "gluejs": "^2.3.9",
     "bootstrap": "^3.3.5",
     "express": "^4.13.3",
     "font-awesome": "^4.4.0",

@@ -71,7 +71,10 @@ module.exports = function(position, game){
   self.move = function(){
     console.log('Entering HumanPlayer.move');
     if(self.inCheck){
-      var lionMoves = self.computeMoves(self.lion);
+      moves = [];
+      self.pieces.forEach(function(piece){
+        moves = moves.concat(self.computeMoves(piece));
+      });
       if(lionMoves.length == 0){
         self.game.notifyDefeat(self);
       }
