@@ -65,11 +65,6 @@ module.exports = function(){
     }
   };
   self.displayBoard = function(){
-    /*
-    self.game.getMovablePieces().forEach(function(piece){
-      self.displayPiece(piece.x, piece.y, piece);
-    });
-    */
     for(var i = 0; i < 4; i++)
       for(var j = 0; j < 3; j++)
         if(self.game.board[i][j])
@@ -140,6 +135,7 @@ module.exports = function(){
   self.clearPosition = function(i, j){
     console.log('Entering ViewModel.clearPosition');
     var selector = self.makeSelector(i, j);
+    console.log('clearing selector: ' + selector);
     $(selector).empty();
     $(selector).off('click');
     console.log('Exiting ViewModel.clearPosition');

@@ -1,6 +1,7 @@
 'use strict';
 
 var HumanPlayer = require('./HumanPlayer'),
+    ComputerPlayer = require('./ComputerPlayer'),
     HenPiece = require('./HenPiece');
 
 module.exports = function(mode, computerPosition){
@@ -16,8 +17,26 @@ module.exports = function(mode, computerPosition){
   self.observers = [];
   self.mode = mode;
   self.computerPosition = computerPosition;
-  self.earthPlayer = new HumanPlayer('earth', self);
-  self.skyPlayer = new HumanPlayer('sky', self);
+  if(mode === 'versus human'){
+
+    self.earthPlayer = new HumanPlayer('earth', self);
+    self.skyPlayer = new HumanPlayer('sky', self);
+
+  } else if(mode === 'versus computer'){
+
+    if(computerPosition === 'sky'){
+
+      self.earthPlayer = new HumanPlayer('earth', self);
+      self.skyPlayer = new ComputerPlayer('sky', self, module.exports);
+
+    } else {
+
+      self.earthPlayer = new ComputerPlayer('earth', self, module.exports);
+      self.skyPlayer = new HumanPlayer('sky', self);
+
+    }
+
+  }
   self.currPlayer = 'earth';
   self.registerObserver = function(observer){
     self.observers.push(observer);
@@ -34,7 +53,6 @@ module.exports = function(mode, computerPosition){
     console.log('Exiting Game.startGame');
   };
   self.nextMove = function(){
-    self.notifyObservers(self.currPlayer == 'earth' ? 'skyPlayerMove' : 'earthPlayerMove');
     if(self.currPlayer == 'earth'){
       self.currPlayer = 'sky';
       self.skyPlayer.move();
@@ -42,10 +60,12 @@ module.exports = function(mode, computerPosition){
       self.currPlayer = 'earth';
       self.earthPlayer.move();
     }
+    self.notifyObservers(self.currPlayer == 'earth' ? 'skyPlayerMove' : 'earthPlayerMove');
   };
   self.executeMove = function(piece, move){
     console.log('Entering Game.executeMove');
     console.log('piece.type: ' + piece.type);
+    var prevPos;
     // Check if an opponent's piece is in the new position and if there is,
     // remove it and add this piece to the current player's bench.
     if(self.board[move.x][move.y]){
@@ -65,16 +85,19 @@ module.exports = function(mode, computerPosition){
           break;
         }
       }
+      prevPos = {'x': -1, 'y': -1};
       piece.owner.pieces.push(piece);
     } else {
+      //console.log('piece.x: ' + piece.x + ' piece.y: ' + piece.y);
+      prevPos = {'x': piece.x, 'y': piece.y};
       self.board[piece.x][piece.y] = null;
-      // Check if this piece is a Chick that has made it to the end zone.
+      //console.log('self.board[piece.x][piece.y]: ' + self.board[piece.x][piece.y]);
+    }
+    // Check if this piece is a Chick that has made it to the end zone.
+    if((piece.type == 'EarthChick' && move.x == 0) ||
+       (piece.type == 'SkyChick' && move.x == 3)){
       piece.owner.removePiece(piece);
-      if(piece.type == 'EarthChick' && move.x == 0){
-        piece = new HenPiece(piece.side, piece.owner);
-      } if(piece.type == 'SkyChick' && move.x == 3){
-        piece = new HenPiece(piece.side, piece.owner);
-      }
+      piece = new HenPiece(piece.side, piece.owner);
       piece.owner.pieces.push(piece);
     }
     self.board[move.x][move.y] = piece;
@@ -100,7 +123,7 @@ module.exports = function(mode, computerPosition){
         }
       }
     }
-    self.history.push({'piece.type': piece.type, 'move': move});
+    self.history.push({'piece.type': piece.type, 'move': move, 'prevPos': prevPos});
     self.nextMove();
     console.log('Exiting Game.executeMove');
   };

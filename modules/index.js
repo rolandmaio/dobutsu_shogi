@@ -11,4 +11,4 @@ var Game = require('./Game.js'),
       'switchSidesElement': UIElement('switchSidesButton')
     };
 
-var app = new Application(Game, ViewModel, UIElements);
+module.exports = new Application(Game, ViewModel, UIElements);
