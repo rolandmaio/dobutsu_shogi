@@ -95,11 +95,6 @@ module.exports = function(position, game, Game){
     self.updateMentalGame();
     var move = self.max(Infinity, 0);
     self.mentalSelf.makeMove(move.moveInfo.piece, move.moveInfo.move);
-    /*
-    if(move.moveInfo.piece.type == 'EarthLion' || move.moveInfo.piece.type == 'SkyLion'){
-      self.lionPosition = move.moveInfo.move;
-    }
-    */
     var prevPos = move.moveInfo.prevPos,
         piece = null;
     // Check if this piece was moved on to the board from the bench.
@@ -124,7 +119,6 @@ module.exports = function(position, game, Game){
     self.makeMove(piece, move.moveInfo.move);
     console.log('Exiting ComputerPlayer.move');
   }
-
   self.makeMove = function(piece, move){
     console.log('Entering ComputerPlayer.makeMove');
     console.log('piece: ' + piece);
@@ -365,19 +359,15 @@ module.exports = function(position, game, Game){
   self.computeMentalMoves = function(mentalPlayer){
     console.log('Entering ComputerPlayer.computeMentalMoves');
     var moves = [],
-        player = (mentalPlayer == 'self') ? self.mentalSelf : self.mentalOpponent;
-    for(var i = 0; i < player.pieces.length; ++i){
-      var pieceMoves = player.computeMoves(player.pieces[i]);
+        player = (mentalPlayer == 'self') ? self.mentalSelf : self.mentalOpponent,
+        pieces = player.pieces.concat(player.bench);
+    for(var i = 0; i < pieces.length; ++i){
+      var pieceMoves = player.computeMoves(pieces[i]);
       for(var j = 0; j < pieceMoves.length; ++j){
-        moves.push({'piece': player.pieces[i], 'move': pieceMoves[j],
-                    'prevPos': {'x': player.pieces[i].x, 'y': player.pieces[i].y}});
+        moves.push({'piece': pieces[i], 'move': pieceMoves[j],
+                    'prevPos': {'x': pieces[i].x, 'y': pieces[i].y}});
       }
     }
-    /*
-    for(var i = 0; i < moves.length; ++i){
-      console.log(moves[i].piece.type + ' ' + JSON.stringify(moves[i].move));
-    }
-    */
     console.log('Exiting ComputerPlayer.computeMentalMoves');
     return moves;
   }
