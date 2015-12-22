@@ -104,7 +104,7 @@ module.exports = function(position, game, Game){
       for(var i = 0; i < bench.length; ++i){
         if(bench[i].type == move.moveInfo.piece.type){
           piece = bench[i];
-          bench.splice(i, 1);
+          //bench.splice(i, 1);
           found = true;
           break;
         }
@@ -259,43 +259,23 @@ module.exports = function(position, game, Game){
       piece = self.mentalGame.board[lastMove.prevPos.x][lastMove.prevPos.y];
     }
     self.mentalOpponent.makeMove(piece, lastMove.move);
-    /*
-    for(var i = 0; i < 4; i++){
-      for(var j = 0; j < 3; j++){
-        if(self.mentalGame.board[i][j] &&
-           self.mentalGame.board[i][j].type == lastMove['piece.type']){
-          var piece = self.mentalGame.board[i][j];
-          self.mentalOpponent.makeMove(piece, lastMove.move);
-        }
-      }
-    }
-    */
     console.log('Exiting ComputerPlayer.updateMentalGame');
   }
 
   self.max = function(beta, curDepth){
     console.log('Entering ComputerPlayer.max');
     console.log('beta: ' + beta + ' curDepth: ' + curDepth);
-    /* DO NOT DELETE
+    // Base case.
     if(curDepth == self.maxDepth){
       return {'score': self.staticEval(), 'moveInfo': null};
     }
-    var memo = self.makeMentalMemo(),
-        bestScore = -Infinity,
-        bestMove = null;
-    */
 
-    var mentalMoves = self.computeMentalMoves('self'),
+    var memo = self.makeMentalMemo(self.position),
+        bestScore = -Infinity,
+        bestMove = null,
+        mentalMoves = self.computeMentalMoves('self'),
         moveProfile = null;
 
-    for(var i = 0; i < mentalMoves.length; ++i){
-      console.log(mentalMoves[i].piece.type + ' ' + JSON.stringify(mentalMoves[i].move));
-    }
-    // TEMP TO TEST
-    var randomMove = mentalMoves[Math.floor(Math.random()*mentalMoves.length)];
-    return {'score': 0, 'moveInfo': randomMove};
-
-    /*
     for(var i = 0; i < mentalMoves.length; ++i){
       self.mentalSelf.makeMove(mentalMoves[i].piece, mentalMoves[i].move);
       moveProfile = self.min(bestScore, curDepth + 1);
@@ -310,15 +290,16 @@ module.exports = function(position, game, Game){
     }
 
     return {'score': bestScore, 'moveInfo': bestMove };
-    */
 
   }
 
   self.min = function(alpha, curDepth){
+    console.log('Entering CommputerPlayer.min');
+    console.log('alpha: ' + alpha + ' curDepth: ' + curDepth);
     if(curDepth == self.maxDepth){
-      return self.staticEval();
+      return {'score': self.staticEval(), 'move': null};
     }
-    var memo = self.makeMentalMemo(),
+    var memo = self.makeMentalMemo(self.position == 'sky' ? 'earth' : 'sky'),
         bestScore = Infinity,
         bestMove = null;
 
@@ -341,14 +322,66 @@ module.exports = function(position, game, Game){
 
   }
 
-  self.makeMentalMemo = function(){
+  self.makeMentalMemo = function(currPlayer){
     /* Return a memo of the mental game's current state */
-    // TODO
-    return {};
+    var memo = {
+      'mentalSelf.lionPosition': self.mentalSelf.lionPosition,
+      'mentalOpponent.lionPosition': self.mentalOpponent.lionPosition,
+      'board': [
+        [null, null, null],
+        [null, null, null],
+        [null, null, null],
+        [null, null, null]
+      ],
+      'mentalSelf.pieces': [],
+      'mentalOpponent.pieces': [],
+      'mentalSelf.bench': self.mentalSelf.bench.concat(),
+      'mentalOpponent.bench': self.mentalOpponent.bench.concat(),
+      'currPlayer': currPlayer
+    };
+    for(var i = 0; i < 4; ++i){
+      for(var j = 0; j < 3; ++j){
+        memo['board'][i][j] = self.mentalGame.board[i][j];
+      }
+    }
+    for(var i = 0; i < self.mentalSelf.pieces.length; ++i){
+      memo['mentalSelf.pieces'].push(self.mentalSelf.pieces[i]);
+    }
+    for(var i = 0; i < self.mentalOpponent.pieces.length; ++i){
+      memo['mentalOpponent.pieces'].push(self.mentalOpponent.pieces[i]);
+    }
+    return memo;
   }
 
   self.restoreMentalState = function(memo){
-    // TODO
+    // Restore the player's lion's position.
+    self.mentalSelf.lionPosition = memo['mentalSelf.lionPosition'];
+    self.mentalOpponent.lionPosition = memo['mentalOpponent.lionPosition'];
+    // Restore the board state.
+    for(var i = 0; i < 4; ++i){
+      for(var j = 0; j < 3; ++j){
+        self.mentalGame.board[i][j] = memo['board'][i][j];
+        if(self.mentalGame.board[i][j]){
+          self.mentalGame.board[i][j].setPosition(i, j);
+        }
+      }
+    }
+    // Restore the player's pieces.
+    self.mentalSelf.pieces = memo['mentalSelf.pieces'].concat();
+    self.mentalOpponent.pieces = memo['mentalOpponent.pieces'].concat();
+    // Restore the player's benches.
+    self.mentalSelf.bench = memo['mentalSelf.bench'].concat();
+    for(var i = 0; i < self.mentalSelf.bench.length; ++i){
+      self.mentalSelf.bench[i].setPosition(-1, -1);
+    }
+    self.mentalOpponent.bench = memo['mentalOpponent.bench'].concat();
+    for(var i = 0; i < self.mentalOpponent.bench.length; ++i){
+      self.mentalOpponent.bench[i].setPosition(-1, -1);
+    }
+    // Restore the current player.
+    self.mentalGame.currPlayer = memo['currPlayer'];
+    // Pop the last move off of the history.
+    self.mentalGame.history.pop();
   }
 
   self.staticEval = function(){
@@ -360,14 +393,47 @@ module.exports = function(position, game, Game){
     console.log('Entering ComputerPlayer.computeMentalMoves');
     var moves = [],
         player = (mentalPlayer == 'self') ? self.mentalSelf : self.mentalOpponent,
-        pieces = player.pieces.concat(player.bench);
-    for(var i = 0; i < pieces.length; ++i){
-      var pieceMoves = player.computeMoves(pieces[i]);
-      for(var j = 0; j < pieceMoves.length; ++j){
-        moves.push({'piece': pieces[i], 'move': pieceMoves[j],
-                    'prevPos': {'x': pieces[i].x, 'y': pieces[i].y}});
+        pieces = player.pieces.concat(player.bench),
+        pieceMoves = null;
+
+    if(player.inCheck){
+      pieceMoves = player.computeMoves(player.lion);
+      for(var i = 0; i < pieceMoves.length; ++i){
+        moves.push({
+          'piece': player.lion,
+          'move': pieceMoves[i],
+          'prevPos': {'x': player.lion.x, 'y': player.lion.y}
+        })
+      }
+      for(var i = 0; i < pieces.length; ++i){
+        if(pieces[i].type == 'EarthLion' || pieces[i].type == 'SkyLion'){
+          continue;
+        }
+        pieceMoves = player.computeMoves(pieces[i]);
+        for(var j = 0; j < pieceMoves.length; ++j){
+          if(pieceMoves[j].x == player.attackingPosition.x &&
+             pieceMoves[j].y == player.attackingPosition.y){
+            moves.push({
+              'piece': pieces[i],
+              'move': pieceMoves[j],
+              'prevPos': {'x': pieces[i].x, 'y': pieces[i].y}
+            });
+          }
+        }
+      }
+    } else {
+      for(var i = 0; i < pieces.length; ++i){
+        pieceMoves = player.computeMoves(pieces[i]);
+        for(var j = 0; j < pieceMoves.length; ++j){
+          moves.push({
+            'piece': pieces[i],
+            'move': pieceMoves[j],
+            'prevPos': {'x': pieces[i].x, 'y': pieces[i].y}
+          });
+        }
       }
     }
+
     console.log('Exiting ComputerPlayer.computeMentalMoves');
     return moves;
   }

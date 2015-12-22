@@ -30,12 +30,15 @@ module.exports = function(){
       }
       console.log('Exiting ViewModel.eventCallbacks.earthPlayerMove');
     },
-    'gameOver': function(){
-      for(var i = 0; i < 4; i++)
+    'gameOver': function(player){
+      for(var i = 0; i < 4; i++){
         for(var j = 0; j < 3; j++){
           var selector = self.makeSelector(i, j);
           $(selector).off('click');
         }
+      }
+      var msg = 'Game over! The ' + (player.position == 'earth' ? 'Sky' : 'Earth') + ' player wins!';
+      alert(msg);
     }
   };
   self.newGame = function(game){
@@ -47,9 +50,9 @@ module.exports = function(){
     self.computeEntities();
     console.log('Exiting ViewModel.newGame');
   }
-  self.notify = function(evt){
+  self.notify = function(evt, data){
     console.log('Entering ViewModel.notify');
-    self.eventCallbacks[evt]();
+    self.eventCallbacks[evt](data);
     console.log('Exiting ViewModel.notify');
   };
   self.computeEntities = function(){

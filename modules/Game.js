@@ -41,9 +41,9 @@ module.exports = function(mode, computerPosition){
   self.registerObserver = function(observer){
     self.observers.push(observer);
   };
-  self.notifyObservers = function(evt){
+  self.notifyObservers = function(evt, data){
     self.observers.forEach(function(observer){
-      observer.notify(evt);
+      observer.notify(evt, data);
     })
   };
   self.startGame = function(){
@@ -157,12 +157,7 @@ module.exports = function(mode, computerPosition){
     return tiles;
   };
   self.notifyDefeat = function(player){
-    var msg = 'Game over! The ' + (player.position == 'earth' ? 'Sky' : 'Earth') + ' player wins!';
-    alert(msg);
-    for(var i = 0; i < self.history.length; i++){
-      console.log('Move ' + i + ': ' + JSON.stringify(self.history[i]));
-    }
-    self.notifyObservers('gameOver');
+    self.notifyObservers('gameOver', player);
   }
 
 }
