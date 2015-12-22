@@ -2,7 +2,6 @@
 
 module.exports = function(side, owner){
 
-  console.log('Entering GiraffePiece constructor.');
   var self = this;
   self.type = side == 'earth' ? 'EarthGiraffe' : 'SkyGiraffe';
   self.owner = owner;
@@ -19,6 +18,5 @@ module.exports = function(side, owner){
       {'x': self.x, 'y': self.y - 1}
     ]
   }
-  console.log('Exiting GiraffePiece constructor.');
 
 }

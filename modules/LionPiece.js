@@ -2,7 +2,6 @@
 
 module.exports = function(side, owner){
 
-  console.log('Entering LionPiece constructor.');
   var self = this;
   self.owner = owner;
   self.type = side == 'earth' ? 'EarthLion' : 'SkyLion';
@@ -23,6 +22,5 @@ module.exports = function(side, owner){
         {'x': self.x + 1, 'y': self.y - 1}
       ]
   };
-  console.log('Exiting LionPiece constructor.');
 
 }

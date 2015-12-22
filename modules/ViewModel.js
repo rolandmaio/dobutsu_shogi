@@ -19,7 +19,6 @@ module.exports = function(){
       }
     },
     'earthPlayerMove': function(){
-      console.log('Entering ViewModel.eventCallbacks.earthPlayerMove');
       self.clearBoard();
       self.clearHighlightedPieces();
       self.clearHighlightedPossibleMoves();
@@ -28,7 +27,6 @@ module.exports = function(){
       if(!self.earthPlayerIsHuman){
         return;
       }
-      console.log('Exiting ViewModel.eventCallbacks.earthPlayerMove');
     },
     'gameOver': function(player){
       for(var i = 0; i < 4; i++){
@@ -39,21 +37,27 @@ module.exports = function(){
       }
       var msg = 'Game over! The ' + (player.position == 'earth' ? 'Sky' : 'Earth') + ' player wins!';
       alert(msg);
+    },
+    'gameDraw': function(){
+      for(var i = 0; i < 4; i++){
+        for(var j = 0; j < 3; j++){
+          var selector = self.makeSelector(i, j);
+          $(selector).off('click');
+        }
+      }
+      var msg = 'Game over! It\'s a draw!';
+      alert(msg);
     }
   };
   self.newGame = function(game){
-    console.log('Entering ViewModel.newGame');
     self.game = game;
     self.game.registerObserver(self);
     self.clearBoard();
     self.displayBoard();
     self.computeEntities();
-    console.log('Exiting ViewModel.newGame');
   }
   self.notify = function(evt, data){
-    console.log('Entering ViewModel.notify');
     self.eventCallbacks[evt](data);
-    console.log('Exiting ViewModel.notify');
   };
   self.computeEntities = function(){
     if(self.game.mode == 'versus human'){
@@ -93,8 +97,6 @@ module.exports = function(){
   };
 
   self.displayPiece = function(i, j, piece){
-    console.log('Entering ViewModel.displayPiece');
-    console.log('Type: ' + self.pieceImages[piece.type]);
     var selector = '#' + i + j;
     $(selector).append(self.pieceImages[piece.type]);
     $(selector).click(function(){
@@ -102,7 +104,6 @@ module.exports = function(){
         return;
       }
       var moves = piece.owner.computeMoves(piece);
-      console.log(JSON.stringify(moves));
       self.clearHighlightedPossibleMoves();
       self.clearHighlightedBenchPieces();
       self.clearHighlightedPieces();
@@ -110,7 +111,6 @@ module.exports = function(){
       $(selector).toggleClass('highlighted-select');
       self.highlightPossibleMoves(piece, moves);
     });
-    console.log('Exiting ViewModel.displayPiece');
   };
   self.highlightPossibleMoves = function(piece, moves){
     moves.forEach(function(move){
@@ -136,16 +136,11 @@ module.exports = function(){
     self.highlightedPossibleMovePieces = [];
   };
   self.clearPosition = function(i, j){
-    console.log('Entering ViewModel.clearPosition');
     var selector = self.makeSelector(i, j);
-    console.log('clearing selector: ' + selector);
     $(selector).empty();
     $(selector).off('click');
-    console.log('Exiting ViewModel.clearPosition');
   };
   self.makeSelector = function(i, j){
-    console.log('Entering ViewModel.makeSelector');
-    console.log('Exiting ViewModel.makeSelector');
     return '#' + i + j;
   };
   self.displayBenches = function(){
@@ -159,7 +154,6 @@ module.exports = function(){
           return;
         }
         var moves = piece.owner.computeMoves(piece);
-        console.log(JSON.stringify(moves));
         self.clearHighlightedPossibleMoves();
         self.clearHighlightedBenchPieces();
         self.clearHighlightedPieces();
@@ -174,13 +168,11 @@ module.exports = function(){
     earthBench.forEach(function(piece){
       var html = $(self.pieceImages[piece.type]),
           image = $(html).filter('img').get(0);
-      console.log('image: ' + image);
       $(html).click(function(){
         if(!(self.game.currPlayer == piece.owner.position)){
           return;
         }
         var moves = piece.owner.computeMoves(piece);
-        console.log(JSON.stringify(moves));
         self.clearHighlightedPossibleMoves();
         self.clearHighlightedBenchPieces();
         self.clearHighlightedPieces();

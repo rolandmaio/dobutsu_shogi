@@ -2,7 +2,6 @@
 
 module.exports = function(side, owner){
 
-  console.log('Entering HenPiece constructor');
   var self = this;
   self.owner = owner;
   self.side = side;
@@ -35,6 +34,5 @@ module.exports = function(side, owner){
     }
     return moves;
   };
-  console.log('Exiting HenPiece constructor');
 
 }

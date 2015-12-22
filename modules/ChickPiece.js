@@ -2,7 +2,6 @@
 
 module.exports = function(side, owner){
 
-  console.log('Entering ChickPiece constructor');
   var self = this;
   self.owner = owner;
   self.side = side;
@@ -14,6 +13,5 @@ module.exports = function(side, owner){
   self.generateMoves = function(){
     return [{'x': self.x + (self.side == 'earth' ? -1 : 1), 'y': self.y}];
   };
-  console.log('Exiting ChickPiece constructor');
 
 }

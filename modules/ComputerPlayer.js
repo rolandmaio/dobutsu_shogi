@@ -13,7 +13,8 @@ module.exports = function(position, game, Game){
   self.game = game;
 
   self.mentalGame = new Game('versus human', 'sky');
-  self.maxDepth = 1;
+  self.maxDepth = 5;
+  self.winningMove = false;
   if(self.position == 'sky'){
     self.mentalSelf = self.mentalGame.skyPlayer;
     self.mentalOpponent = self.mentalGame.earthPlayer;
@@ -22,6 +23,18 @@ module.exports = function(position, game, Game){
     self.mentalOpponent = self.mentalGame.skyPlayer;
   }
   self.mentalGame.startGame();
+
+  self.eventCallbacks = {
+    'gameOver': function(player){
+      self.winningMove = true;
+    },
+    'skyPlayerMove': function(){},
+    'earthPlayerMove': function(){}
+  };
+  self.notify = function(evt, data){
+    self.eventCallbacks[evt](data);
+  };
+  self.mentalGame.registerObserver(self);
 
   self.bench = [];
   self.inCheck = false;
@@ -48,7 +61,6 @@ module.exports = function(position, game, Game){
   };
 
   self.earthInitialization = function(){
-    console.log('Entering ComputerPlayer.earthInitialization');
     self.game.board[3][0] = self.pieces[2];   // Set the Elephant's position.
     self.game.board[3][1] = self.pieces[0];   // Set the Lion's position.
     self.game.board[3][2] = self.pieces[1];  // Set the Giraffe's position.
@@ -60,10 +72,8 @@ module.exports = function(position, game, Game){
     self.pieces[3].setPosition(2, 1);
 
     self.lionPosition = {'x': 3, 'y': 1};
-    console.log('Exiting ComputerPlayer.earthInitialization');
   };
   self.skyInitialization = function(){
-    console.log('Entering ComputerPlayer.skyInitialization');
     self.game.board[0][0] = self.pieces[1];  // Set the Giraffe's position.
     self.game.board[0][1] = self.pieces[0];     // Set the Lion's position.
     self.game.board[0][2] = self.pieces[2]; // Set the Elephant's position.
@@ -75,13 +85,11 @@ module.exports = function(position, game, Game){
     self.pieces[3].setPosition(1, 1);
 
     self.lionPosition = {'x': 0, 'y': 1};
-    console.log('Exiting ComputerPlayer.skyInitialization');
   };
 
   position == 'earth' ? self.earthInitialization() : self.skyInitialization();
 
   self.move = function(){
-    console.log('Entering ComputerPlayer.move');
     if(self.inCheck){
       var moves = [];
       self.pieces.forEach(function(piece){
@@ -117,19 +125,14 @@ module.exports = function(position, game, Game){
     }
 
     self.makeMove(piece, move.moveInfo.move);
-    console.log('Exiting ComputerPlayer.move');
   }
   self.makeMove = function(piece, move){
-    console.log('Entering ComputerPlayer.makeMove');
-    console.log('piece: ' + piece);
     if(piece.type == 'EarthLion' || piece.type == 'SkyLion'){
       self.lionPosition = move;
     }
     self.game.executeMove(piece, move);
-    console.log('Exiting ComputerPlayer.makeMove');
   }
   self.computeMoves = function(piece){
-    console.log('Entering ComputerPlayer.computeMoves');
     var moves = [];
     if(self.inCheck){
       // If this is not the Lion, check if it can attack the attacker.
@@ -144,7 +147,6 @@ module.exports = function(position, game, Game){
         //    a) One of our own pieces blocks the move.
         //    b) If the tile to which we would move is threatened by another piece.
         var threatenedTiles = self.game.getThreatenedTiles();
-        console.log('threatenedTiles: ' + JSON.stringify(threatenedTiles));
         piece.generateMoves().forEach(function(move){
           if((0 <= move.x && move.x <= 3 && 0 <= move.y && move.y <= 2) &&
              (game.board[move.x][move.y] == null ||
@@ -168,9 +170,7 @@ module.exports = function(position, game, Game){
           if((0 <= move.x && move.x <= 3 && 0 <= move.y && move.y <= 2) &&
              (game.board[move.x][move.y] == null ||
               game.board[move.x][move.y].side != position)){
-            console.log('game.board[move.x][move.y]: ' + game.board[move.x][move.y]);
             if(game.board[move.x][move.y] != null){
-              console.log('game.board[move.x][move.y] side: ' + game.board[move.x][move.y].side);
             }
             moves.push(move);
           }
@@ -180,7 +180,6 @@ module.exports = function(position, game, Game){
         //    a) One of our own pieces blocks the move.
         //    b) If the tile to which we would move is threatened by another piece.
         var threatenedTiles = self.game.getThreatenedTiles();
-        console.log('threatenedTiles: ' + JSON.stringify(threatenedTiles));
         piece.generateMoves().forEach(function(move){
           if((0 <= move.x && move.x <= 3 && 0 <= move.y && move.y <= 2) &&
              (game.board[move.x][move.y] == null ||
@@ -196,31 +195,23 @@ module.exports = function(position, game, Game){
         });
       }
     }
-    console.log('Exiting ComputerPlayer.computeMoves');
     return moves;
   };
   self.removePiece = function(piece){
-    console.log('Entering ComputerPlayer.removePiece');
-    console.log('self.pieces.length before: ' + self.pieces.length);
     for(var i = 0; i < self.pieces.length; i++){
       if(piece.type == self.pieces[i].type){ //&& piece.y == self.pieces[i].y){
         self.pieces.splice(i, 1);
         break;
       }
     }
-    console.log('self.pieces.length after: ' + self.pieces.length);
-    console.log('Exiting ComputerPlayer.removePiece');
   };
   self.addToBench = function(piece){
-    console.log('Entering ComputerPlayer.addToBench');
     var constructor = self.takenTypeToPiece[piece.type],
         newPiece = new constructor(self.position, self);
     newPiece.setPosition(-1, -1);
     self.bench.push(newPiece);
-    console.log('Exiting ComputerPlayer.addToBench');
   };
   self.removeFromBench = function(piece){
-    console.log('Entering ComputerPlayer.removeFromBench');
     for(var i = 0; i < self.bench.length; i++){
       if(piece.type == self.bench[i].length){
         self.bench = self.bench.splice(i, 1);
@@ -228,14 +219,17 @@ module.exports = function(position, game, Game){
       }
     }
     self.pieces.push(piece);
-    console.log('Exiting ComputerPlayer.removeFromBench');
   }
   self.getBench = function(){
     return self.bench;
   }
 
   self.updateMentalGame = function(){
-    console.log('Entering ComputerPlayer.updateMentalGame');
+
+    if(self.game.history.length == 0){
+      return;
+    }
+
     var lastMove = self.game.history[self.game.history.length - 1],
         piece = null;
 
@@ -259,34 +253,37 @@ module.exports = function(position, game, Game){
       piece = self.mentalGame.board[lastMove.prevPos.x][lastMove.prevPos.y];
     }
     self.mentalOpponent.makeMove(piece, lastMove.move);
-    console.log('Exiting ComputerPlayer.updateMentalGame');
   }
 
   self.max = function(beta, curDepth){
-    console.log('Entering ComputerPlayer.max');
-    console.log('beta: ' + beta + ' curDepth: ' + curDepth);
     // Base case.
     if(curDepth == self.maxDepth){
       return {'score': self.staticEval(), 'moveInfo': null};
     }
 
     var memo = self.makeMentalMemo(self.position),
-        bestScore = -Infinity,
-        bestMove = null,
         mentalMoves = self.computeMentalMoves('self'),
+        bestScore = -Infinity,
+        bestMove = mentalMoves[0],
         moveProfile = null;
 
     for(var i = 0; i < mentalMoves.length; ++i){
+      self.winningMove = false;
       self.mentalSelf.makeMove(mentalMoves[i].piece, mentalMoves[i].move);
+      if(self.winningMove){
+        self.restoreMentalState(memo);
+        self.winningMove = false;
+        return {'score': Infinity, 'moveInfo': mentalMoves[i]};
+      }
       moveProfile = self.min(bestScore, curDepth + 1);
+      self.restoreMentalState(memo);
       if(moveProfile.score > bestScore){
         bestScore = moveProfile.score;
         bestMove = mentalMoves[i];
       }
-      if(bestScore > beta){
-        return {'score': bestScore, 'move': bestMove };
+      if(bestScore > beta || bestScore == Infinity){
+        return {'score': bestScore, 'moveInfo': bestMove };
       }
-      self.restoreMentalState(memo);
     }
 
     return {'score': bestScore, 'moveInfo': bestMove };
@@ -294,31 +291,37 @@ module.exports = function(position, game, Game){
   }
 
   self.min = function(alpha, curDepth){
-    console.log('Entering CommputerPlayer.min');
-    console.log('alpha: ' + alpha + ' curDepth: ' + curDepth);
+    // Base case.
     if(curDepth == self.maxDepth){
-      return {'score': self.staticEval(), 'move': null};
+      return {'score': self.staticEval(), 'moveInfo': null};
     }
+
     var memo = self.makeMentalMemo(self.position == 'sky' ? 'earth' : 'sky'),
         bestScore = Infinity,
-        bestMove = null;
-
-    var mentalMoves = self.computeMentalMoves('opponent'),
+        bestMove = null,
+        mentalMoves = self.computeMentalMoves('opponent'),
         moveProfile = null;
+
     for(var i = 0; i < mentalMoves.length; i++){
+      self.winningMove = false;
       self.mentalOpponent.makeMove(mentalMoves[i].piece, mentalMoves[i].move);
+      if(self.winningMove){
+        self.restoreMentalState(memo);
+        self.winningMove = false;
+        return {'score': -Infinity, 'moveInfo': mentalMoves[i]};
+      }
       moveProfile = self.max(bestScore, curDepth + 1);
+      self.restoreMentalState(memo);
       if(moveProfile.score < bestScore){
         bestScore = moveProfile.score;
         bestMove = mentalMoves[i];
       }
-      if(bestScore < alpha){
-        return {'score': bestScore, 'move': bestMove };
+      if(bestScore < alpha || bestScore == -Infinity){
+        return {'score': bestScore, 'moveInfo': bestMove };
       }
-      self.restoreMentalState(memo);
     }
 
-    return {'score': bestScore, 'move': bestMove };
+    return {'score': bestScore, 'moveInfo': bestMove };
 
   }
 
@@ -385,12 +388,64 @@ module.exports = function(position, game, Game){
   }
 
   self.staticEval = function(){
-    // TODO
-    return 10;
+    // Parameters of the static evaluation function.
+    var alpha = 1,
+        beta = 1,
+        gamma = 5,
+        delta = 5;
+
+    // Local variables to be used in the computation.
+    var score = 0,
+        selfMoves = self.computeMentalMoves('self'),
+        numSelfMoves = selfMoves.length,
+        opponentMoves = self.computeMentalMoves('opponent'),
+        numOpponentMoves = opponentMoves.length,
+        counter = 0,
+        x,
+        y,
+        i;
+
+    // Having more pieces is better.
+    score += alpha*(self.mentalSelf.pieces.length + self.mentalSelf.bench.length);
+    // Having more moves available than your opponent is better.
+    score += beta*(numSelfMoves - numOpponentMoves);
+    // Threatening the opponent's pieces is good.
+    for(i = 0; i < numSelfMoves; ++i){
+      x = selfMoves[i].move.x;
+      y = selfMoves[i].move.y;
+      if(self.mentalGame.board[x][y] &&
+         self.mentalGame.board[x][y].owner == self.mentalOpponent){
+        ++counter;
+      }
+    }
+    score += gamma*counter;
+    // Having your pieces threated is bad.
+    counter = 0;
+    for(i = 0; i < numOpponentMoves; ++i){
+      x = opponentMoves[i].move.x;
+      y = opponentMoves[i].move.y;
+      if(self.mentalGame.board[x][y] &&
+         self.mentalGame.board[x][y].owner == self.mentalSelf){
+        ++counter;
+      }
+    }
+    score -= gamma*counter;
+    // Protecting your pieces is good.
+    counter = 0;
+    for(i = 0; i < numSelfMoves; ++i){
+      x = selfMoves[i].move.x;
+      y = selfMoves[i].move.y;
+      if(self.mentalGame.board[x][y] &&
+         self.mentalGame.board[x][y].owner == self.mentalSelf){
+        ++counter;
+      }
+    }
+    score += delta*counter;
+
+    return score;
   }
 
   self.computeMentalMoves = function(mentalPlayer){
-    console.log('Entering ComputerPlayer.computeMentalMoves');
     var moves = [],
         player = (mentalPlayer == 'self') ? self.mentalSelf : self.mentalOpponent,
         pieces = player.pieces.concat(player.bench),
@@ -434,7 +489,6 @@ module.exports = function(position, game, Game){
       }
     }
 
-    console.log('Exiting ComputerPlayer.computeMentalMoves');
     return moves;
   }
 

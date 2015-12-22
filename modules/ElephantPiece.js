@@ -2,7 +2,6 @@
 
 module.exports = function(side, owner){
 
-  console.log('Entering ElephantPiece constructor');
   var self = this;
   self.type = side == 'earth' ? 'EarthElephant' : 'SkyElephant';
   self.owner = owner;
@@ -20,6 +19,5 @@ module.exports = function(side, owner){
     ];
   };
 
-  console.log('Exiting ElephantPiece constructor');
 
 }

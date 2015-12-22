@@ -17,6 +17,7 @@ module.exports = function(mode, computerPosition){
   self.observers = [];
   self.mode = mode;
   self.computerPosition = computerPosition;
+  self.cycleCounter = 0;
   if(mode === 'versus human'){
 
     self.earthPlayer = new HumanPlayer('earth', self);
@@ -47,10 +48,8 @@ module.exports = function(mode, computerPosition){
     })
   };
   self.startGame = function(){
-    console.log('Entering Game.startGame');
     self.currPlayer = 'sky';
     self.nextMove();
-    console.log('Exiting Game.startGame');
   };
   self.nextMove = function(){
     if(self.currPlayer == 'earth'){
@@ -63,8 +62,6 @@ module.exports = function(mode, computerPosition){
     self.notifyObservers(self.currPlayer == 'earth' ? 'skyPlayerMove' : 'earthPlayerMove');
   };
   self.executeMove = function(piece, move){
-    console.log('Entering Game.executeMove');
-    console.log('piece.type: ' + piece.type);
     var prevPos;
     // Check if an opponent's piece is in the new position and if there is,
     // remove it and add this piece to the current player's bench.
@@ -88,17 +85,24 @@ module.exports = function(mode, computerPosition){
       prevPos = {'x': -1, 'y': -1};
       piece.owner.pieces.push(piece);
     } else {
-      //console.log('piece.x: ' + piece.x + ' piece.y: ' + piece.y);
       prevPos = {'x': piece.x, 'y': piece.y};
       self.board[piece.x][piece.y] = null;
-      //console.log('self.board[piece.x][piece.y]: ' + self.board[piece.x][piece.y]);
     }
-    // Check if this piece is a Chick that has made it to the end zone.
-    if((piece.type == 'EarthChick' && move.x == 0) ||
-       (piece.type == 'SkyChick' && move.x == 3)){
+    // Check if this piece is a Chick that has made it to the end zone
+    // on the board, and not from the bench.
+    if(((piece.type == 'EarthChick' && move.x == 0) ||
+       (piece.type == 'SkyChick' && move.x == 3)) &&
+       (piece.x != -1 && piece.y != -1)){
       piece.owner.removePiece(piece);
       piece = new HenPiece(piece.side, piece.owner);
       piece.owner.pieces.push(piece);
+    }
+    // Check if this piece is a Lion that has made it to the end zone.
+    if(piece.type == 'EarthLion' && move.x == 0){
+      self.notifyDefeat(self.skyPlayer);
+    }
+    if(piece.type == 'SkyLion' && move.x == 3){
+      self.notifyDefeat(self.earthPlayer);
     }
     self.board[move.x][move.y] = piece;
     piece.setPosition(move.x, move.y);
@@ -124,8 +128,8 @@ module.exports = function(mode, computerPosition){
       }
     }
     self.history.push({'piece.type': piece.type, 'move': move, 'prevPos': prevPos});
+    self.updateCycleCounter();
     self.nextMove();
-    console.log('Exiting Game.executeMove');
   };
   self.openTiles = function(){
     var tiles = [];
@@ -143,21 +147,42 @@ module.exports = function(mode, computerPosition){
     }
   };
   self.getThreatenedTiles = function(){
-    console.log('Entering Game.getThreatenedTiles');
     var player = self.currPlayer == 'earth' ? self.skyPlayer : self.earthPlayer,
         tiles = [];
-    console.log('player.pieces.length: ' + player.pieces.length);
     player.pieces.forEach(function(piece){
-      console.log('piece.type: ' + piece.type);
-      console.log('piece.generateMoves(): ' + JSON.stringify(piece.generateMoves()));
       tiles = tiles.concat(piece.generateMoves());
     });
-    console.log('Threatened tiles: ' + JSON.stringify(tiles));
-    console.log('Exiting Game.getThreatenedTiles');
     return tiles;
   };
   self.notifyDefeat = function(player){
     self.notifyObservers('gameOver', player);
-  }
+  };
+  self.printHistory = function(){
+    self.history.forEach(function(move){
+      console.log(JSON.stringify(move));
+    });
+  };
+  self.updateCycleCounter = function(){
+
+    if(self.history.length < 3){
+      return;
+    }
+
+    var curMove = self.history[self.history.length - 1],
+        lastMove = self.history[self.history.length - 3];
+
+    if(curMove['piece.type'] == lastMove['piece.type'] &&
+       curMove.move.x == lastMove.prevPos.x &&
+       curMove.move.y == lastMove.prevPos.y){
+      ++self.cycleCounter;
+    } else {
+      self.cycleCounter = 0;
+    }
+
+    if(self.cycleCounter == 8){
+      self.notifyObservers('gameDraw');
+    }
+
+  };
 
 }
