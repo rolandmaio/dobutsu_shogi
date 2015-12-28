@@ -13,7 +13,7 @@ module.exports = function(position, game, Game){
   self.game = game;
 
   self.mentalGame = new Game('versus human', 'sky');
-  self.maxDepth = 5;
+  self.maxDepth = 6;
   self.winningMove = false;
   if(self.position == 'sky'){
     self.mentalSelf = self.mentalGame.skyPlayer;
@@ -127,6 +127,7 @@ module.exports = function(position, game, Game){
     self.makeMove(piece, move.moveInfo.move);
   }
   self.makeMove = function(piece, move){
+    self.inCheck = false;
     if(piece.type == 'EarthLion' || piece.type == 'SkyLion'){
       self.lionPosition = move;
     }
@@ -199,7 +200,9 @@ module.exports = function(position, game, Game){
   };
   self.removePiece = function(piece){
     for(var i = 0; i < self.pieces.length; i++){
-      if(piece.type == self.pieces[i].type){ //&& piece.y == self.pieces[i].y){
+      if(piece.type == self.pieces[i].type &&
+         piece.x == self.pieces[i].x &&
+         piece.y == self.pieces[i].y){
         self.pieces.splice(i, 1);
         break;
       }

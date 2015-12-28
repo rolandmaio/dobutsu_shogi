@@ -111,7 +111,7 @@ module.exports = function(mode, computerPosition){
     if(self.currPlayer == 'earth'){
       self.skyPlayer.attackingPosition = move;
       var lionPosition = self.skyPlayer.lionPosition;
-      self.skyPlayer.inCheck = false;
+      //self.skyPlayer.inCheck = false;
       for(var i = 0; i < threatens.length; ++i){
         if(threatens[i].x == lionPosition.x && threatens[i].y == lionPosition.y){
           self.skyPlayer.inCheck = true;
@@ -120,7 +120,7 @@ module.exports = function(mode, computerPosition){
     } else {
       self.earthPlayer.attackingPosition = move;
       var lionPosition = self.earthPlayer.lionPosition;
-      self.earthPlayer.inCheck = false;
+      //self.earthPlayer.inCheck = false;
       for(var i = 0; i < threatens.length; ++i){
         if(threatens[i].x == lionPosition.x && threatens[i].y == lionPosition.y){
           self.earthPlayer.inCheck = true;
